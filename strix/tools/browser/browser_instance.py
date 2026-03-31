@@ -19,6 +19,7 @@ MAX_JS_RESULT_LENGTH = 5_000
 
 class BrowserInstance:
     def __init__(self) -> None:
+        super().__init__()
         self.is_running = True
         self._execution_lock = threading.Lock()
 

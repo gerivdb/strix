@@ -18,6 +18,7 @@ if TYPE_CHECKING:
 
 class ProxyManager:
     def __init__(self, auth_token: str | None = None):
+        super().__init__()
         host = "127.0.0.1"
         port = os.getenv("CAIDO_PORT", "56789")
         self.base_url = f"http://{host}:{port}/graphql"

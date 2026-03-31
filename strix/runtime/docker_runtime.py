@@ -20,6 +20,7 @@ logger = logging.getLogger(__name__)
 
 class DockerRuntime(AbstractRuntime):
     def __init__(self) -> None:
+        super().__init__()
         try:
             self.client = docker.from_env()
         except DockerException as e:

@@ -29,6 +29,7 @@ class TerminalSession:
     PS1_END = "]$ "
 
     def __init__(self, session_id: str, work_dir: str = "/workspace") -> None:
+        super().__init__()
         self.session_id = session_id
         self.work_dir = str(Path(work_dir).resolve())
         self._closed = False

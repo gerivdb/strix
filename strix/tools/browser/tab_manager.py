@@ -10,6 +10,7 @@ from .browser_instance import BrowserInstance
 
 class BrowserTabManager:
     def __init__(self) -> None:
+        super().__init__()
         self.browser_instance: BrowserInstance | None = None
         self._lock = threading.Lock()
 

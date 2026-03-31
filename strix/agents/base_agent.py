@@ -52,6 +52,7 @@ class BaseAgent(metaclass=AgentMeta):
     default_llm_config: LLMConfig | None = None
 
     def __init__(self, config: dict[str, Any]):
+        super().__init__()
         self.config = config
 
         self.local_sources = config.get("local_sources", [])

@@ -10,6 +10,7 @@ from .terminal_session import TerminalSession
 
 class TerminalManager:
     def __init__(self) -> None:
+        super().__init__()
         self.sessions: dict[str, TerminalSession] = {}
         self._lock = threading.Lock()
         self.default_terminal_id = "default"

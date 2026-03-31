@@ -25,6 +25,7 @@ def set_global_tracer(tracer: "Tracer") -> None:
 
 class Tracer:
     def __init__(self, run_name: str | None = None):
+        super().__init__()
         self.run_name = run_name
         self.run_id = run_name or f"run-{uuid4().hex[:8]}"
         self.start_time = datetime.now(UTC).isoformat()

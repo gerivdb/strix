@@ -13,6 +13,7 @@ MAX_STDERR_LENGTH = 5_000
 
 class PythonInstance:
     def __init__(self, session_id: str) -> None:
+        super().__init__()
         self.session_id = session_id
         self.is_running = True
         self._execution_lock = threading.Lock()

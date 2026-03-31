@@ -118,6 +118,7 @@ class RequestStats:
 
 class LLM:
     def __init__(self, config: LLMConfig, agent_name: str | None = None):
+        super().__init__()
         self.config = config
         self.agent_name = agent_name
         self._total_stats = RequestStats()

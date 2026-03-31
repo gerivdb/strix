@@ -27,6 +27,7 @@ def should_retry_exception(exception: Exception) -> bool:
 
 class LLMRequestQueue:
     def __init__(self, max_concurrent: int = 6, delay_between_requests: float = 1.0):
+        super().__init__()
         self.max_concurrent = max_concurrent
         self.delay_between_requests = delay_between_requests
         self._semaphore = threading.BoundedSemaphore(max_concurrent)

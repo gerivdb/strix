@@ -10,6 +10,7 @@ from .python_instance import PythonInstance
 
 class PythonSessionManager:
     def __init__(self) -> None:
+        super().__init__()
         self.sessions: dict[str, PythonInstance] = {}
         self._lock = threading.Lock()
         self.default_session_id = "default"
