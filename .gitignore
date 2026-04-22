@@ -96,3 +96,9 @@ Thumbs.db
 schema.graphql
 
 .opencode/
+
+# Crash dumps (Git Bash Windows)
+*.stackdump
+
+# ECOS health history
+.ecos_health_history.json
