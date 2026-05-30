@@ -4,7 +4,7 @@ repo: gerivdb/strix
 strate: L3
 lifecycle: ACTIVE
 vague: 5
-synchro: '2026-05-30'
+synchro: '2026-05-31'
 hub: gerivdb/GOVERNANCE-HUB
 intent_hash: '0xC60F1CF24A91D13F'
 phi_cps:
@@ -31,14 +31,14 @@ rules:
 
 # STRATUM RELAY — strix (L3)
 
-**VAGUE**: 5 | **Synchro**: 2026-05-30 | **Hub**: gerivdb/GOVERNANCE-HUB
+**VAGUE**: 5 | **Synchro**: 2026-05-31 | **Hub**: gerivdb/GOVERNANCE-HUB
 
 ---
 
 ## Identite stratique
 
 - **Strate** : `L3` — Systeme moteur CLI
-- **Role canonique** : Strix Ã”Ã‡Ã¶ outil systeme
+- **Role canonique** : Strix  -  outil systeme
 - **Parent** : L2
 - **Enfants** : L4
 - **phi-CPS** : null (FIELD_ABSENT)
