@@ -1,6 +1,6 @@
 # STRATUM RELAY — strix (L3)
 
-**VAGUE**: 3 | **Synchro**: 2026-05-29 | **Hub**: gerivdb/LLM-REPO
+**VAGUE**: 4 | **Synchro**: 2026-05-30 | **Hub**: gerivdb/LLM-REPO
 
 - **Strate** : `L3` — Systeme moteur CLI
 - **Role canonique** : Strix — outil systeme interne
@@ -27,10 +27,35 @@
 - **Parent (amont)** : ECOS-CLI (L3) — strix s'appuie sur ECOS-CLI pour les commandes systeme orchestrees.
 - **Enfants (aval)** : Aucun — strix est un outil systeme autonome en bout de chaine.
 
+## Agents locaux (Vague 4)
+
+```yaml
+# .roomodes — profil agent strix
+agent: strix-ops
+strate: L3
+role: Internal system tool
+rules: strix/rules/system_rules.yaml
+hub_ref: ECOS-CLI
+```
+
+L'agent `strix-ops` execute les commandes systeme internes, filtre les requetes externes non autorisees, et mainten le log d'execution.
+
+## Auto-conformite (Vague 4)
+
+- **Guard 1 — Internal only** : Strix refuse toute requete provenant d'une source externe non authentifiee.
+- **Guard 2 — No public exposure** : Aucune commande ou endpoint de strix n'est expose publiquement.
+- **Guard 3 — Execution logging** : Chaque execution de commande systeme est journallee pour audit.
+
 ## Vague de mise a jour
 
 | Vague | Contenu | Statut |
 |-------|---------|--------|
 | 2 | Identite + regles + Karpathy-Recall 5Q | Deploye |
-| **3 (courante)** | Recall etendu a 10Q + section Dependances | Deploye |
-| 4 (suivante) | Integration filesystem snapshot + monitoring systeme | Planifie |
+| 3 | Recall etendu a 10Q + section Dependances | Deploye |
+| **4 (courante)** | Agents locaux + auto-conformite | Deploye |
+
+---
+
+*Genere par `VERSUS/urban_ontology_verse/TOOLS/relay_propagator.py` v4.0*
+*UrbanVerse v4.0.0 — gerivdb/VERSUS (L8)*
+*IntentHash: 0xPHASE8_STRIX_V4_20260530*
