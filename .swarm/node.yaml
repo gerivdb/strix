@@ -1,0 +1,11 @@
+# .swarm/node.yaml - Carte d'identite holographique
+# IntentHash: 0xSWARM_NODE_GENOME_20260622
+node:
+  name: strix
+  full_name: gerivdb/strix
+  url: https://github.com/gerivdb/strix
+  layer: L3_EMERGENCE
+  role: "Citoyen Strix"
+  lens: cold
+  phi_cps: 1.0
+  do_not_create: true
