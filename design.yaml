@@ -1,0 +1,25 @@
+---
+name: strix
+description: "Strix — Pattern friction governance pour la détection de collisions et l'audit de signatures."
+version: "1.0.0"
+parent: unified-design
+inherits:
+  - friction-governance
+  - auto-correction
+capabilities:
+  - name: friction-governance
+    parameters:
+      detector: friction_detector
+      corrector: post_implement_check
+      registry: CITIZENS.yaml
+      fallback: Kilo Agent
+  - name: auto-correction
+    parameters:
+      detector: friction_detector
+      corrector: post_implement_check
+stratum: L3_CITIZENS
+status: active
+generated_by: unified-design/create_design.py
+generated_at: "2026-07-15T20:36:00"
+intent_hash: 0xSTRIX_DESIGN_20260715
+---
